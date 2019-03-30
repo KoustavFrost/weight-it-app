@@ -14,5 +14,26 @@
             </div>
         </div>
     </div>
+    <div>
+        <h3 class="text-center">Your weights are here</h3>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Weight(in Kg)</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>56</td>
+                        <td>26/16/2019</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 @include('layouts.footer') 

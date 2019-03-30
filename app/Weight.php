@@ -10,4 +10,13 @@ class Weight extends Model
     protected $fillable = [
         'weight'
     ];
+
+    public function getWeightFromDB()
+    {
+        $weights = static::all();
+
+        foreach ($weights as $weight) {
+            return $weight->weight;
+        }
+    }
 }
