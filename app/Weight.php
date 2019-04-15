@@ -13,10 +13,6 @@ class Weight extends Model
 
     public function getWeightFromDB()
     {
-        $weights = static::all();
-
-        foreach ($weights as $weight) {
-            return $weight->weight;
-        }
+        return Weight::all();
     }
 }

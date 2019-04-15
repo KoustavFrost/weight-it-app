@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Redirect;
 
 class WeightController extends Controller
 {
+    protected $weight;
+    public function __construct()
+    {
+        $this->weight = new Weight();
+    }
+
     public function addWeights(Request $request)
     {
         $data = array(
@@ -24,12 +30,5 @@ class WeightController extends Controller
         }
 
         return Redirect::to('/')->with($notification);
-    }
-
-    public function getWeights()
-    {
-        $returnData = Weight::getWeightFromDB();
-        Log::debug(__METHOD__ . "The return data =>", (array)$returnData);
-        return Redirect::to('/')->with($returnData);
     }
 }

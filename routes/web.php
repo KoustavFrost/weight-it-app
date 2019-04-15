@@ -20,5 +20,3 @@ Route::get('/', function () {
 });
 
 Route::post('/insertWeights', 'WeightController@addWeights');
-
-Route::resource('weights', 'WeightController@getWeights');
